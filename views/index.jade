@@ -1,0 +1,15 @@
+h1= title
+p Welcome to #{title}
+form(action="/", method="post")
+  p
+    label(for="url") URL
+  p
+    input(type="text", name="url")
+  - if (typeof url !== 'undefined' && shortened !== 'undefined') {
+    p
+      span Original URL: #{url}
+    p
+      span Shortened: #{shortened}
+  - }
+  p
+    input(type="submit") Submit
